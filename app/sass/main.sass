@@ -113,6 +113,9 @@ h1
 h2
   font-size: 75px
   font-weight: bold
+  color: #808080
+  margin: 0 0 14px
+  width: 100%
 
 .logo
   display: flex
@@ -120,6 +123,48 @@ h2
   justify-content: center
   max-width: 1286px
   width: 100%
+
+.links-white
+  color: #fff
+
+  &:hover
+    color: $hover
+
+.text-decoration
+  text-decoration: underline
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  outline: none
+  box-shadow: none
+  text-align: center
+  padding: 8px 42px
+  width: fit-content
+  font-size: 26px
+  line-height: 1
+  height: 56px
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn-border
+  border-radius: 28px
+  border: solid 1px #400070
+  color: $accent
+  &:hover
+    background: $accent
+    color: #fff
+
+.btn-border-white
+  border: 1px solid #fff
+  color: #fff
+  &:hover
+    background: #fff
+    color: $accent
+
+
 
 //header
 header
@@ -179,15 +224,20 @@ header
   background: #400070
   color: #fff
   display: none
+
   .menu
     font-size: 18px
+
     li
       margin: 0 0 20px
       width: 100%
+
       a
         text-align: right
+
         &:hover
-          color: grey
+          color: $hover
+
   .logo
     margin: 0 auto 30px
 
@@ -197,6 +247,7 @@ header
   width: 20px
   height: 20px
   position: relative
+
   &:before, &:after
     content: ''
     position: absolute
@@ -205,8 +256,10 @@ header
     width: 2px
     height: 100%
     background: #fff
+
   &:before
     transform: rotate(45deg)
+
   &:after
     transform: rotate(135deg)
 
@@ -266,12 +319,13 @@ header
   position: relative
   padding: 0 140px 0 0
   margin: 0 0 46px
+
   &:before
     content: ''
     position: absolute
     right: 0
     top: 50%
-    transform: translate(0,-50%)
+    transform: translate(0, -50%)
     width: 132px
     height: 135px
     background: url("../img/logo-min.png") no-repeat center
@@ -290,6 +344,7 @@ header
 
   p
     margin: 0 0 30px
+
     &:last-child
       margin: 0
 
@@ -297,6 +352,8 @@ header
   width: calc(100% - 261px)
   padding: 0 55px 0 34px
   position: relative
+  text-align: justify
+
   &:after
     content: ''
     position: absolute
@@ -306,6 +363,7 @@ header
     height: 49px
     background: url("../img/mouse.png") no-repeat center
       size: 100%
+
   &:before
     content: ''
     position: absolute
@@ -319,26 +377,423 @@ header
   display: flex
   align-items: flex-start
   flex-wrap: wrap
+
   h3
     font-size: 32px
     font-weight: 300
     max-width: 261px
     width: 100%
 
+//advantages
+.advantages-slider
+  width: 100%
+  position: relative
+  .slick-arrow
+    right: 0
+  .slick-next
+    top: calc(50% - 125px)
+  .slick-prev
+    bottom: calc(50% + 15px)
+  &:before
+    content: ''
+    position: absolute
+    right: 115px
+    top: 0
+    height: calc(100% - 60px)
+    width: 3000px
+    background: #fff
+    z-index: -1
+
+.advantages-slider-item
+  position: relative
+
+.advantages-slider-item__content
+  position: relative
+  z-index: 1
+  padding: 40px 115px 135px 0
+  display: flex
+  align-items: center
+
+  h3
+    max-width: 470px
+    width: 100%
+    font-weight: bold
+    font-size: 54px
+    color: #000
+  .box-text
+    max-width: 772px
+    width: calc(100% - 470px)
+    padding: 0 0 0 189px
+    font-size: 20px
+    line-height: 1.25
+  .num
+    position: absolute
+    overflow: hidden
+    width: 132px
+    right: 115px
+    top: -30px
+    color: #40006f
+    font-size: 336px
+    font-family: 'ClarendonBT-Roman', sans-serif
+
+.advantages-slider__icon
+  width: 93px
+  height: 94px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 0 36px
+
+.advantages-slider-item__tags
+  display: flex
+  align-items: center
+  width: fit-content
+  margin: 0 0 0 auto
+  position: relative
+  z-index: 1
+  background: $accent
+  padding: 49px 120px 49px 38px
+  font-size: 30px
+  &:before
+    content: ''
+    display: inline-block
+    margin: 0 80px 0 0
+    width: 22px
+    height: 21px
+    background: url("../img/tag.png") no-repeat center
+      size: 100%
+  li
+    &:last-child
+      a
+        &:after
+          display: none
+    a
+      display: flex
+      align-items: center
+      color: #fff
+      &:after
+        content: '/'
+        display: inline-block
+        margin: 0 65px
+
+.slick-disabled
+  opacity: 0
+  visibility: hidden
+
+.slick-dots
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  bottom: 20px
+  position: absolute
+  left: 0
+  padding: 0 0 0 210px
+  li
+    cursor: pointer
+    transition: .3s ease
+    width: 14px
+    height: 14px
+    border: none
+      radius: 50%
+    margin: 0 97px 0 0
+    background: #fff
+    &:last-child
+      margin: 0
+    button
+      display: none
+  .slick-active
+    background: $accent
+
+//reviews
+.reviews
+  position: relative
+  h2
+    margin: 0 0 21px
+
+.reviews-content
+  position: relative
+  width: 100%
+  z-index: 1
+  min-height: 533px
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    width: 3000px
+    height: 100%
+    background: #fff
+    z-index: -1
+  .slick-arrow
+    left: -60px
+  .slick-prev
+    top: calc(50% - 75px)
+  .slick-next
+    bottom: calc(50% - 75px)
+
+.reviews-col
+  position: initial
+    
+.nav-tabs
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translate(0,-50%)
+  z-index: 2
+  align-items: flex-end
+  border: none
+    radius: 0
+  .nav-link
+    margin: 0 0 26px
+    text-transform: uppercase
+    font-size: 16px
+    padding: 11px 55px 11px 25px
+    background-color: #d9d9d9
+    border: none
+      radius: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    color: #808080
+    font-weight: bold
+    width: 136px
+    height: 93px
+    position: relative
+    &:last-child
+      margin: 0
+  .nav-link.active
+    background: #400070
+    width: 233px
+    .nav-tabs__icon
+      filter: brightness(0) invert(1)
+
+
+
+.nav-tabs__icon
+  transition: .3s ease
+  margin: 0 auto 0 0
+
+.nav-tabs__text
+  display: inline-block
+  transform: rotate(-90deg) translate(0,-50%)
+  position: absolute
+  top: 40%
+  right: -10px
+
+.reviews-slider-video__item
+  width: 100%
+  max-width: 1100px
+  height: 500px
+  margin: 0 auto
+
+  iframe
+    width: 100%
+    height: 100%
+
+.slick-arrow
+  width: 86px
+  height: 19px
+  padding: 0
+  border: none
+    radius: 0
+  position: absolute
+  z-index: 1
+  opacity: 1
+  outline: none
+  cursor: pointer
+
+.slick-slide
+  outline: none
+
+.slick-prev
+  background: url("../img/arrow-prev.png") no-repeat center
+    size: 100%
+
+.slick-next
+  background: url("../img/arrow-next.png") no-repeat center
+    size: 100%
+
+.reviews-slider
+  padding: 45px 120px 38px
+
+.reviews-slider-content__item
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+.reviews-slider-photo
+  max-width: 598px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.reviews-slider-text
+  width: calc(100% - 598px)
+  padding: 0 0 0 177px
+  h3
+    font-size: 54px
+    font-weight: bold
+    color: $accent
+  .position
+    margin: 22px 0 70px
+    font-size: 26px
+    color: #000
+  .box-text
+    position: relative
+    line-height: 1.56
+    &:before
+      content: ''
+      position: absolute
+      left: -54px
+      top: -38px
+      width: 41px
+      height: 38px
+      background: url("../img/quote-icon.png") no-repeat center
+        size: 100%
+
+//resources
+.resources
+  margin: 106px 0
+
+.resources-img
+  min-width: 848px
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.resources-row
+  width: 100%
+  background: $accent
+  color: #fff
+  font-size: 20px
+  h3
+    font-size: 54px
+    font-weight: bold
+  .box-text
+    line-height: 1.15
+    margin: 22px 0 32px
+    padding: 0 150px 0 120px
+
+.resources-row:nth-child(odd)
+  color: #40006f
+  background: #fff
+  text-align: right
+  .resources-img
+    float: right
+  .box-text
+    padding: 0 120px 0 150px
+  .btn
+    margin: 0 0 0 auto
+
+.resources-content
+  height: 100%
+  padding: 67px 0
+
+//advertising-company
+.advertising-company
+  padding: 113px 0
+
+  h2
+    position: relative
+    margin: 0 0 29px
+    padding: 0 86px 0 0
+    color: $accent
+
+    &:before
+      content: ''
+      position: absolute
+      width: 86px
+      height: 19px
+      right: 0
+      top: 50%
+      transform: translate(0, -50%)
+      background: url("../img/arrow-next.png") no-repeat center
+        size: 100%
+
+  .box-text
+    line-height: 1.38
+    text-align: justify
+
+.links-calculation-company
+  position: relative
+  z-index: 1
+  color: #fff
+  padding: 40px 0 35px 117px
+  font-size: 54px
+  line-height: 1.06
+  font-weight: bold
+
+  &:hover
+    color: #d9d9d9
+
+  &:before
+    content: ''
+    position: absolute
+    left: 70px
+    top: 0
+    width: 2000px
+    height: 100%
+    background: $accent
+    z-index: -1
+
+
+//career
+.career
+  padding: 131px 0 107px
+  position: relative
+  z-index: 1
+  overflow: hidden
+  color: #fff
+  margin: 0 0 114px
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: .6
+    z-index: 1
+
+  .container
+    position: relative
+    z-index: 2
+
+.become-links
+  font-size: 26px
+  margin: 513px 0 0 auto
+  text-align: right
+
+
 //footer
 footer
   background: $accent
   color: #fff
   padding: 79px 0 78px
+
   .logo
     max-width: 519px
+
   .menu
     font-size: 17px
+
     li
       margin: 0 35px 0 0
+
       a
         &:hover
-          color: grey
+          color: $hover
 
 .list-social
   width: 100%
@@ -346,10 +801,13 @@ footer
   align-items: center
   justify-content: flex-end
   margin: 0 0 26px
+
   li
     margin: 0 60px 20px 0
+
     &:last-child
       margin: 0 0 20px
+
     a
       display: flex
       align-items: center
