@@ -33,3 +33,5 @@ $('.advantages-slider').slick({
     dots: true,
     infinite: false,
 });
+
+new WOW().init();
