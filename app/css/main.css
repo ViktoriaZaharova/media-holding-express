@@ -248,10 +248,10 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300; }
   .menu li {
-    margin: 0 48px 0 0; }
+    margin: 0 25px 0 0; }
     .menu li:last-child {
       margin: 0; }
     .menu li a {
@@ -1017,6 +1017,8 @@ footer {
   padding: 36px 0; }
   .header .logo {
     max-width: 210px; }
+  .header .menu li a:hover {
+    color: #d9d9d9; }
 
 .page-section {
   padding: 110px 0; }
@@ -2267,6 +2269,118 @@ footer {
   max-width: 353px;
   width: 100%; }
 
+.modal__div {
+  position: fixed;
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 101;
+  overflow: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+  opacity: 0; }
+
+.modal__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer; }
+  .modal__close:before, .modal__close:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #40006f; }
+  .modal__close:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .modal__close:after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg); }
+
+.modal__wrapper {
+  background: #fff;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: 50px auto;
+  padding: 30px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative; }
+  .modal__wrapper h2 {
+    margin: 30px 0;
+    font-size: 26px;
+    text-align: center; }
+  .modal__wrapper .form label {
+    margin: 0 0 20px; }
+  .modal__wrapper .form button {
+    margin: 30px auto 0; }
+
+textarea {
+  height: 100px;
+  padding: 10px 26px; }
+
+.label-file {
+  position: relative;
+  width: 100%;
+  border: solid 1px #000000;
+  padding: 0 20px;
+  min-height: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.input-file-text {
+  border: 1px solid #40006f;
+  padding: 10px;
+  cursor: pointer;
+  background: #d9d9d9;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+  .input-file-text:hover {
+    background: #40006f;
+    color: #fff; }
+
+.inp-file {
+  display: none; }
+
+.overlay {
+  z-index: 100;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1780px) {
@@ -2291,9 +2405,9 @@ footer {
   .footer-box-text p {
     margin: 0 0 18px; }
   .menu {
-    font-size: 22px; }
+    font-size: 18px; }
     .menu li {
-      margin: 0 30px 0 0; }
+      margin: 0 20px 0 0; }
   .readers-img {
     min-width: 700px; }
   .form-basket__footer {
@@ -2350,10 +2464,6 @@ footer {
     min-width: 550px; } }
 
 @media only screen and (max-width: 1400px) {
-  .menu {
-    font-size: 20px; }
-    .menu li {
-      margin: 0 20px 0 0; }
   .author-name {
     font-size: 60px; }
   h2 {
@@ -2467,7 +2577,9 @@ footer {
 
 @media only screen and (max-width: 1200px) {
   .menu {
-    font-size: 16px; }
+    font-size: 14px; }
+    .menu li {
+      margin: 0 15px 0 0; }
   .home {
     padding: 300px 0 120px; }
   header {
@@ -3074,7 +3186,9 @@ footer {
       max-width: none;
       font-size: 26px; }
     .home-tele-content .logo {
-      max-width: 180px; } }
+      max-width: 180px; }
+  .modal__wrapper {
+    padding: 30px; } }
 
 @media only screen and (max-width: 480px) {
   .links-calculation-company {
